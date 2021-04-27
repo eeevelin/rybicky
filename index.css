@@ -1,0 +1,85 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.container {
+  background: url(image/aquarium.jpg);
+  height: 100vh;
+  width: 100wh;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+}
+
+.fish-container {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.fish-container img {
+  height: 100px;
+  position: absolute;
+}
+
+.fish1 {
+  top: 10%;
+  transform: translateY(-50%);
+  transform: rotateY(180deg);
+  animation: fishAnimation 12s linear infinite;
+}
+
+.fish2 {
+  top: 66%;
+  transform: translateY(-50%);
+  animation: fishAnimationAlt 12s linear infinite;
+}
+
+.fish3 {
+  left: 20%;
+  top: 80%;
+  animation: fishAnimationUpDown 8s linear infinite;
+
+}
+
+.fish4 {
+  left: 0%;
+  top: 10%;
+  animation: fishAnimationAlt 12s linear infinite;
+
+}
+
+
+@keyframes fishAnimation {
+  0% {
+    left: -10%;
+ }
+  100% {
+    left: 110%;
+    top: 50%;
+  }
+}
+@keyframes fishAnimationAlt {
+  0% {
+    left: 150%;
+  }
+  100% {
+    left: -10%;
+  }
+}
+
+@keyframes fishAnimationUpDown {
+  0% {
+    top: 100%;
+  }
+  50%{
+    top: 50%;
+  }
+  100% {
+    top: 100%;
+    left: 40%;
+  }
+}
